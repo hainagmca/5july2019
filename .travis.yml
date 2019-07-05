@@ -10,6 +10,11 @@ stages:
   - migrate
 if: tag IS blank
 
+branches:
+  except:
+  - legacy
+  - experimental
+  
 jobs:
   include:
     - stage: build and publish
