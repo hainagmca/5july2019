@@ -25,7 +25,7 @@ jobs:
       script:
         - APPLICATION=allocations
         - chmod 777 gradlew 
-        - ./gradlew clean :applications:${APPLICATION}-server:build -xTest
+        - ./gradlew clean :applications:${APPLICATION}-server:build
       before_deploy:
         - git config --local user.name "Travis CI"
         - git config --local user.email "travis@example.com"
@@ -50,7 +50,7 @@ jobs:
       script:
         - APPLICATION=backlog
         - chmod 777 gradlew 
-        - ./gradlew clean :applications:${APPLICATION}-server:build -xTest
+        - ./gradlew clean :applications:${APPLICATION}-server:build
       before_deploy:
         - git config --local user.name "Travis CI"
         - git config --local user.email "travis@example.com"
@@ -71,7 +71,7 @@ jobs:
       script:
         - APPLICATION=registration
         - chmod 777 gradlew 
-        - ./gradlew clean :applications:${APPLICATION}-server:build -xTest
+        - ./gradlew clean :applications:${APPLICATION}-server:build
       before_deploy:
         - git config --local user.name "Travis CI"
         - git config --local user.email "travis@example.com"
@@ -91,7 +91,7 @@ jobs:
         - ./gradlew testMigrate
       script:
         - APPLICATION=timesheets
-        - ./gradlew clean :applications:${APPLICATION}-server:build -xTest
+        - ./gradlew clean :applications:${APPLICATION}-server:build
       before_deploy:
         - git config --local user.name "Travis CI"
         - git config --local user.email "travis@example.com"
